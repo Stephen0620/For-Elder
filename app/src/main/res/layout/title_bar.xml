@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:src="@drawable/detail_1"
+        android:src="@drawable/category_10_detail_1"
         android:layout_marginRight="10dip"
         />
 
