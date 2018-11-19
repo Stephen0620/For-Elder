@@ -18,7 +18,7 @@ public class FragmentLeft extends Fragment{
     public static FragmentLeft newInstance(String strArg){
         FragmentLeft fragment = new FragmentLeft();
         Bundle args = new Bundle();
-        args.putString("strArg1", strArg);
+        args.putString("category", strArg);
         fragment.setArguments(args);
         return fragment;
     }
@@ -40,6 +40,17 @@ public class FragmentLeft extends Fragment{
         ImageButton ImgButton1 = (ImageButton) view_layout_left.findViewById(R.id.detail_1);
         ImageButton ImgButton2 = (ImageButton) view_layout_left.findViewById(R.id.detail_2);
         ImageButton ImgButton3 = (ImageButton) view_layout_left.findViewById(R.id.detail_3);
+
+        Bundle args = getArguments();
+        String category = args.getString("category");
+        Context context = getActivity().getApplicationContext();
+        int id1 = context.getResources().getIdentifier("drawable/" + category + "_detail_1", null, context.getPackageName());
+        int id2 = context.getResources().getIdentifier("drawable/" + category + "_detail_2", null, context.getPackageName());
+        int id3 = context.getResources().getIdentifier("drawable/" + category + "_detail_3", null, context.getPackageName());
+
+        ImgButton1.setImageResource(id1);
+        ImgButton2.setImageResource(id2);
+        ImgButton3.setImageResource(id3);
 
         ImgButton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,5 +74,4 @@ public class FragmentLeft extends Fragment{
         });
         return view_layout_left;
     }
-
 }

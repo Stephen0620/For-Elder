@@ -24,13 +24,16 @@ public class Detail extends AppCompatActivity implements MainCallbacks{
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.title_bar));
 
+        Bundle extras = getIntent().getExtras();
+        String category = extras.getString("Category");
+
         ft = getFragmentManager().beginTransaction();
-        leftFragment = FragmentLeft.newInstance("Left Fragment");
+        leftFragment = FragmentLeft.newInstance(category);
         ft.replace(R.id.holder_left,leftFragment);
         ft.commit();
 
         ft = getFragmentManager().beginTransaction();
-        rightFragment = FragmentRight.newInstance("Right Fragment");
+        rightFragment = FragmentRight.newInstance(category);
         ft.replace(R.id.holder_right,rightFragment);
         ft.commit();
 

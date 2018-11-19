@@ -31,6 +31,7 @@ public class List extends AppCompatActivity {
         list_10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                intent.putExtra("Category", "category_10");
                 startActivity(intent);
             }
         });

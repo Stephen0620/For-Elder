@@ -1,6 +1,7 @@
 package com.example.stephen.forelder;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,7 +19,7 @@ public class FragmentRight extends Fragment implements FragmentCallbacks{
     public static FragmentRight newInstance(String strArg1){
         FragmentRight fragment = new FragmentRight();
         Bundle bundle = new Bundle();
-        bundle.putString("arg1", strArg1);
+        bundle.putString("category", strArg1);
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -33,11 +34,17 @@ public class FragmentRight extends Fragment implements FragmentCallbacks{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstaceState){
         LinearLayout layout_right = (LinearLayout) inflater.inflate(R.layout.layout_right,null);
+
+        Bundle args = getArguments();
+        String category = args.getString("category");
+
+        Context context = getActivity().getApplicationContext();
+        int id = context.getResources().getIdentifier("drawable/" + category + "_detail_1", null, context.getPackageName());
         Img = (ImageView) layout_right.findViewById(R.id.Img);
-        Img.setImageResource(R.drawable.detail_1);
+        Img.setImageResource(id);
         try {
             Bundle arguments = getArguments();
-            String redMessage = arguments.getString("arg1", "");
+            String redMessage = arguments.getString("category", "");
             //txtRight.setText(redMessage);
         } catch (Exception e){
             Log.e("Red Bundle ERROR - ", "" + e.getMessage());
@@ -46,12 +53,18 @@ public class FragmentRight extends Fragment implements FragmentCallbacks{
     }
     @Override
     public void onMsgFromMainToFragment(Integer position) {
+        Bundle args = getArguments();
+        String category = args.getString("category");
+        Context context = getActivity().getApplicationContext();
         if(position==1){
-            Img.setImageResource(R.drawable.detail_1);
+            int id = context.getResources().getIdentifier("drawable/" + category + "_detail_1", null, context.getPackageName());
+            Img.setImageResource(id);
         }else if(position==2){
-            Img.setImageResource(R.drawable.detail_2);
+            int id = context.getResources().getIdentifier("drawable/" + category + "_detail_2", null, context.getPackageName());
+            Img.setImageResource(id);
         }else{
-            Img.setImageResource(R.drawable.detail_3);
+            int id = context.getResources().getIdentifier("drawable/" + category + "_detail_3", null, context.getPackageName());
+            Img.setImageResource(id);
         }
     }
 }
