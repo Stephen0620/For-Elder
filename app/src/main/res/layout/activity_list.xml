@@ -13,6 +13,7 @@
         android:layout_weight="1"
         android:layout_gravity="center">
         <ImageButton
+            android:id="@+id/list_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -23,6 +24,7 @@
             android:src="@drawable/categories_1"
             />
         <ImageButton
+            android:id="@+id/list_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -33,6 +35,7 @@
             android:src="@drawable/categories_2"
             />
         <ImageButton
+            android:id="@+id/list_3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -50,6 +53,7 @@
         android:layout_weight="1"
         android:layout_gravity="center">
         <ImageButton
+            android:id="@+id/list_4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -60,6 +64,7 @@
             android:src="@drawable/categories_4"
             />
         <ImageButton
+            android:id="@+id/list_5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -70,6 +75,7 @@
             android:src="@drawable/categories_5"
             />
         <ImageButton
+            android:id="@+id/list_6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -87,6 +93,7 @@
         android:layout_weight="1"
         android:layout_gravity="center">
         <ImageButton
+            android:id="@+id/list_7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -97,6 +104,7 @@
             android:src="@drawable/categories_7"
             />
         <ImageButton
+            android:id="@+id/list_8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -107,6 +115,7 @@
             android:src="@drawable/categories_8"
             />
         <ImageButton
+            android:id="@+id/list_9"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -135,6 +144,7 @@
             android:src="@drawable/categories_10"
             />
         <ImageButton
+            android:id="@+id/list_11"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -145,6 +155,7 @@
             android:src="@drawable/categories_11"
             />
         <ImageButton
+            android:id="@+id/list_12"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
