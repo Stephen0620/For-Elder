@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Detail extends AppCompatActivity implements MainCallbacks{
 
@@ -36,6 +37,12 @@ public class Detail extends AppCompatActivity implements MainCallbacks{
         rightFragment = FragmentRight.newInstance(category);
         ft.replace(R.id.holder_right,rightFragment);
         ft.commit();
+
+        TextView title = (TextView)findViewById(R.id.title);
+        TextView description = (TextView)findViewById(R.id.description);
+        TextView dimension = (TextView)findViewById(R.id.dimension);
+        TextView weight = (TextView)findViewById(R.id.weight);
+        TextView material = (TextView)findViewById(R.id.material);
 
         Button purchase = (Button)findViewById(R.id.purchase);
         purchase.setOnClickListener(new View.OnClickListener() {
