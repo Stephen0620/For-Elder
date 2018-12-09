@@ -49,8 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/green"
-            android:textSize="28dp"
-            android:text="腦性麻痺後仰式站立架"/>
+            android:textSize="28dp"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -72,8 +71,7 @@
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="對認知能力接近正常、肢體無嚴重固定性變形之中、重度及部分極重度的腦性麻痺患者皆適用。附胸部側撐與固定綁帶，便於支撐固定患者。 附臀部側撐與固定綁帶，便於支撐固定患者"/>
+            android:layout_height="wrap_content" />
         <View
             android:layout_width="match_parent"
             android:layout_height="20dp"
@@ -97,8 +95,7 @@
             <TextView
                 android:id="@+id/dimension"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="130 X 90 X 170 cm"/>
+                android:layout_height="wrap_content" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"
